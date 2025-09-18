@@ -27,7 +27,7 @@ const main = async () => {
     }
 
     const cardBody = document.createElement('div');
-    cardBody.className = 'card-body d-flex flex-column align-items-center';
+    cardBody.className = 'card-body d-flex flex-column align-items-center justify-content-center';
 
     const title = document.createElement('h5');
     title.className = 'card-title mb-2 text-center fw-bold';
@@ -35,7 +35,7 @@ const main = async () => {
 
     const subtitle = document.createElement('h6');
     subtitle.className = 'card-subtitle text-body-secondary text-center';
-    subtitle.innerHTML = `${'⭐'.repeat(Math.round(game.rating))} <span class="ms-1">(${game.rating.toFixed(1)})</span>`;
+    subtitle.innerText = `${'⭐'.repeat(Math.round(game.rating))} (${game.rating.toFixed(1)})`;
 
     
     cardBody.appendChild(title);
